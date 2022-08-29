@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1EF9E193-C492-495C-A8E3-BA6B259D45A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BuildingCompany</RootNamespace>
+    <AssemblyName>BuildingCompany</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>building-company-logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBuildingCompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBuildingCompanyForm.Designer.cs">
+      <DependentUpon>AboutBuildingCompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrigadesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrigadesForm.Designer.cs">
+      <DependentUpon>BrigadesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Database.cs" />
+    <Compile Include="Errors\InputHandler.cs" />
+    <Compile Include="FacilitiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacilitiesForm.Designer.cs">
+      <DependentUpon>FacilitiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuildingCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuildingCompany.Designer.cs">
+      <DependentUpon>FormBuildingCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialsForm.Designer.cs">
+      <DependentUpon>MaterialsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MembershipBrigadesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MembershipBrigadesForm.Designer.cs">
+      <DependentUpon>MembershipBrigadesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfessionsForm.Designer.cs">
+      <DependentUpon>ProfessionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessionsWorkersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfessionsWorkersForm.Designer.cs">
+      <DependentUpon>ProfessionsWorkersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchedulesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SchedulesForm.Designer.cs">
+      <DependentUpon>SchedulesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypesOfFacilityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypesOfFacilityForm.Designer.cs">
+      <DependentUpon>TypesOfFacilityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UseOfMaterialsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UseOfMaterialsForm.Designer.cs">
+      <DependentUpon>UseOfMaterialsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkersForm.Designer.cs">
+      <DependentUpon>WorkersForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBuildingCompanyForm.resx">
+      <DependentUpon>AboutBuildingCompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrigadesForm.resx">
+      <DependentUpon>BrigadesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacilitiesForm.resx">
+      <DependentUpon>FacilitiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuildingCompany.resx">
+      <DependentUpon>FormBuildingCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialsForm.resx">
+      <DependentUpon>MaterialsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembershipBrigadesForm.resx">
+      <DependentUpon>MembershipBrigadesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfessionsForm.resx">
+      <DependentUpon>ProfessionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfessionsWorkersForm.resx">
+      <DependentUpon>ProfessionsWorkersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="SchedulesForm.resx">
+      <DependentUpon>SchedulesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypesOfFacilityForm.resx">
+      <DependentUpon>TypesOfFacilityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UseOfMaterialsForm.resx">
+      <DependentUpon>UseOfMaterialsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkersForm.resx">
+      <DependentUpon>WorkersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="building-company-logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
